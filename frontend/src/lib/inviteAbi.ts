@@ -1,0 +1,18 @@
+export const inviteAbi = [
+  "function getInvite(uint256 inviteId) view returns (address host, uint64 deadline, uint8 phase, uint8 paymentKind, uint256 pot, address winner, bool claimed, bytes32 winnerHandle)",
+  "function getSeats(uint256 inviteId) view returns (address player0, address player1)",
+  "function getHands(uint256 inviteId) view returns (uint8 hostHands, uint8 guestHands)",
+  "function getCommitted(uint256 inviteId) view returns (bool hostCommitted, bool guestCommitted)",
+  "function getBallHandle(uint256 inviteId, uint8 slot) view returns (bytes32)",
+  "function play(uint256 inviteId, uint8 cup)",
+  "function createInvite() returns (uint256)",
+  "function joinInvite(uint256 inviteId)",
+  "function commit(uint256 inviteId, bytes32 encryptedAmount, bytes inputProof)",
+  "function commitFallback(uint256 inviteId)",
+  "function refundExpired(uint256 inviteId)",
+  "function claim(uint256 inviteId, bytes cleartexts, bytes decryptionProof)",
+  "event InviteCreated(uint256 indexed inviteId, address indexed host, uint64 deadline)",
+  "event PlayerCommitted(uint256 indexed inviteId, address indexed player)",
+  "event InviteSealed(uint256 indexed inviteId, bytes32 winnerHandle)",
+  "event PrizeClaimed(uint256 indexed inviteId, address indexed winner, uint256 prize)",
+] as const;
