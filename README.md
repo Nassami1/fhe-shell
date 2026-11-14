@@ -33,8 +33,8 @@ All draws use `FHE.randEuint32(1024)` with published odds: Common 614, Rare 256,
 
 ```bash
 # 1. Clone
-git clone https://github.com/Nassami1/fhe-shell-casino.git
-cd fhe-shell-casino
+git clone https://github.com/Nassami1/fhe-shell.git
+cd fhe-shell
 
 # 2. Install contract dependencies
 npm install
